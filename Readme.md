@@ -1,6 +1,6 @@
 # GoPro - SW Certifiate quick guide
 
-써티 프로따기의 시작과 끝.
+진짜 시작부터 가는 써티 프로따기 가이드.
 
 |Week | Title                        | Theme                                  |
 |:---:|:-----------------------------|:---------------------------------------|
@@ -10,3 +10,5 @@
 | 4   | 자료구조를 만들어보자 part 2 | tree, graph                            |
 | 5   | 자료구조를 만들어보자 part 3 | hash table, heap(priority queue)       |
 | 6   | 알고리즘을 적용해보자 part 1 | |
+
+![GoPro](GoPro.png)
