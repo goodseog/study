@@ -30,19 +30,21 @@ struct Stack {
   }
 
   bool isEmpty() { return cur == 0; }
+
+  int size() { return top; }
 };
 
 int main(int argc, char** argv) {
   Stack<int, 10> stack;
-  stack.push(100);
-  stack.push(200);
-  stack.push(300);
+  cout << "Push 100 : " << endl; stack.push(100);
+  cout << "Push 200 : " << endl; stack.push(200);
+  cout << "Push 300 : " << endl; stack.push(300);
 
-  cout << stack.top() << endl;
-  cout << stack.pop() << endl;
-  cout << stack.pop() << endl;
-  cout << stack.pop() << endl;
-  cout << stack.pop() << endl;
+  cout << "stack.top() : " << stack.top() << endl;
+  cout << "stack.pop() : " << stack.pop() << endl;
+  cout << "stack.pop() : " << stack.pop() << endl;
+  cout << "stack.pop() : " << stack.pop() << endl;
+  cout << "stack.pop() : " << stack.pop() << endl;
 
   cout << "====================" << endl;
 
@@ -55,5 +57,5 @@ int main(int argc, char** argv) {
   cout << stackd.pop() << endl;
   cout << stackd.pop() << endl;
 
-  return 1;
+  return 0;
 }
