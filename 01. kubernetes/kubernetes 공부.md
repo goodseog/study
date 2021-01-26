@@ -47,3 +47,12 @@ kubectl exec $POD_NAME env # POD에 sh문 실행하기
 ## Expose Your App Publicly
 - 쿠버네티스에서 서비스는 하나의 논리적인 파드 셋과 그 파드들에 접근할 수 있는 정책을 정의하는 추상적 개념이다. 서비스는 종속적인 파드들 사이를 느슨하게 결합되도록 해준다. 서비스는 모든 쿠버네티스 오브젝트들과 같이 YAML (보다 선호하는) 또는 JSON을 이용하여 정의된다. 
 
+- 4가지 type의 service 형태
+  - type: ClusterIP - node 내부에만 공개되어있는 IP
+  - type: NodePort - node 외부에 {Node IP}:{Node Port} 형태로 공개
+  - type: LoadBalance - 지원이된다면 로드밸런싱 지원하는 NodePort로 공개
+  - type: ExternalName - CNAME으로 레코드 반환하여 외부 이름으로 서비스 노출
+
+```bash
+
+```
