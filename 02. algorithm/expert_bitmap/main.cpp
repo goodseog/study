@@ -12,7 +12,8 @@ void decomp(unsigned char* FREQ, const unsigned char* COMP);
 
 static void clear(unsigned char* FREQ) {
   for (int y = 0; y < 1000; y++)
-    for (int x = 0; x < 1000; x++) FREQ[y * 1000 + x] = 0;
+    for (int x = 0; x < 1000; x++) 
+      FREQ[y * 1000 + x] = 0;
 }
 
 static int sample(const unsigned char* BITMAP, int x, int y) {
@@ -44,9 +45,11 @@ static void add(unsigned char* FREQ, int x, int y) {
 static void count(unsigned char* FREQ, const unsigned char* BITMAP) {
   for (int y = 0; y < 6000; y++)
     for (int x = 0; x < 6000; x++)
-      if (sample(BITMAP, x, y) == 1) add(FREQ, x, y);
+      if (sample(BITMAP, x, y) == 1) 
+        add(FREQ, x, y);
 }
 
+// x 대칭
 static void process1(unsigned char* FREQ) {
   for (int y = 0; y < 1000; y++)
     for (int x = 0; x < 500; x++) {
@@ -101,12 +104,9 @@ int main(void) {
     for (int c = 0; c < 4500000; c++) BITMAP[c] = random();
 
     build(FREQ1, BITMAP);
-
     clock_t begin = clock();
     test(FREQ2, BITMAP);
-
     comp(COMP1, FREQ2);
-
     memcpy(COMP2, COMP1, 700000);
     decomp(FREQ3, COMP2);
 
